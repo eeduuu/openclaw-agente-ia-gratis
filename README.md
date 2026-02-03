@@ -36,10 +36,7 @@ Vamos a crear el ordenador en la nube donde vivirá tu IA.
     * Tipo: `RSA`. Formato: `.pem`.
     * Guarda el archivo descargado en un lugar seguro (aunque usaremos un método más fácil para conectar).
 7.  **Configuraciones de red:**
-    * Marca las casillas:
-      ☑️ Permitir tráfico SSH.
-      ☑️ Permitir tráfico HTTPS.
-      ☑️ Permitir tráfico HTTP.
+    * Marca las casillas: ☑️ Permitir tráfico SSH, ☑️ Permitir tráfico HTTPS y ☑️ Permitir tráfico HTTP.
 8.  **Almacenamiento:** Configura **25 GB** o **30 GB** (límite máximo de la capa gratuita de AWS).
 9.  Haz clic en **"Lanzar instancia"**.
 
