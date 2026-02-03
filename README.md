@@ -1,4 +1,4 @@
-# OpenClaw: Guía de instalación 100% gratis (sin costes de plataforma ni modelo)
+# OpenClaw: Instalación 100% Gratis > **Cero costes en Servidor (AWS) y modelos (API)**
 
 > **Estado:** 🟢 Activo | **Coste:** 0€ (Usando AWS Free Tier + API gratuita) | **Modelo:** Qwen / Llama 3
 
