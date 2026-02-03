@@ -37,8 +37,8 @@ Vamos a crear el ordenador en la nube donde vivirá tu IA.
     * Guarda el archivo descargado en un lugar seguro (aunque usaremos un método más fácil para conectar).
 7.  **Configuraciones de red:**
     * Marca las casillas:
-      ☑️ Permitir tráfico SSH
-      ☑️ Permitir tráfico HTTPS
+      ☑️ Permitir tráfico SSH.
+      ☑️ Permitir tráfico HTTPS.
       ☑️ Permitir tráfico HTTP.
 8.  **Almacenamiento:** Configura **25 GB** o **30 GB** (límite máximo de la capa gratuita de AWS).
 9.  Haz clic en **"Lanzar instancia"**.
@@ -139,7 +139,7 @@ Tu agente necesita "cuerpo" en Telegram para hablarte.
 
 ---
 
-## 🚀 EJECUCIÓN: ¡Dale vida!
+## 🚀 EJECUCIÓN
 
 Ya está todo listo. Ejecuta este comando para encender al agente en segundo plano:
 
