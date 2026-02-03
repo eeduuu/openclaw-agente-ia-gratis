@@ -8,6 +8,8 @@
 
 Instálalo en un servidor privado para tener tu agente autónomo 24/7. Contrólalo por Telegram con total privacidad, sin hardware propio y a coste $0.
 
+Instálalo en un **servidor privado** para tener tu agente autónomo **24/7**. Contrólalo por **Telegram** con privacidad total, sin hardware propio y a **coste $0**.
+
 ---
 
 ## 📋 Requisitos previos (todo gratis)
