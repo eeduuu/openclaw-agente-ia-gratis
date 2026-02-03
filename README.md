@@ -4,6 +4,8 @@
 
 Instálalo en un **servidor privado** para tenerlo activo **24/7** y contrólalo por **Telegram**, todo sin hardware propio y a **coste $0**.
 
+![Guía completa: Cómo instalar OpenClaw totalmente gratis de principio a fin](https://github.com/user-attachments/assets/ac8e00ca-3332-4bfc-a3b5-88a3394640f0)
+
 ---
 
 ## 📋 Requisitos previos (todo gratis)
