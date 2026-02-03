@@ -1,58 +1,61 @@
-# OpenClaw (Privado y Gratis): Tu Agente de IA Autónomo con Qwen y AWS
+# OpenClaw (privado y gratis): Tu agente de IA autónomo con Qwen y AWS
 
-> **Estado:** 🟢 Activo | **Coste:** 0€ (Usando AWS Free Tier + API Gratuita) | **Modelo:** Qwen / Llama 3
+> **Estado:** 🟢 Activo | **Coste:** 0€ (Usando AWS Free Tier + API gratuita) | **Modelo:** Qwen / Llama 3
 
 Esta guía te permite instalar **OpenClaw** (anteriormente MoltBot) en tu propio servidor privado. A diferencia de ejecutarlo en tu PC, aquí tendrás un agente autónomo 24/7 que trabaja por ti, gestionado desde Telegram, sin coste de hardware y con total privacidad.
 
 ---
 
-## 📋 Requisitos Previos (Todo Gratis)
+## 📋 Requisitos previos (todo gratis)
 
 Antes de tocar la terminal, asegúrate de tener esto a mano:
 
 1.  **Cuenta AWS (Amazon Web Services):** [Crear cuenta aquí](https://aws.amazon.com/es/free/).
     * *Nota:* Te pedirán tarjeta bancaria para verificar identidad, pero no te cobrarán si sigues esta guía (Capa Gratuita 12 meses).
 2.  **Cuenta en GitHub:** Para descargar el código.
-3.  **API Key de IA (El Cerebro):**
-    * Opción Recomendada (Velocidad/Gratis): **[Groq Console](https://console.groq.com/keys)**.
-    * Opción Video (Modelo Qwen): **[OpenRouter](https://openrouter.ai/)** (Busca modelos "Free" como Qwen o usa crédito gratuito).
+3.  **API Key de IA (el cerebro):**
+    * Opción recomendada (velocidad/gratis): **[Groq Console](https://console.groq.com/keys)**.
+    * Configuración para Qwen 2.5 (vía OpenRouter): **[OpenRouter](https://openrouter.ai/)** (busca modelos "free" como Qwen o usa crédito gratuito).
 4.  **Telegram:** Tienes que tener la app instalada.
 
 ---
 
-## ☁️ FASE 1: El Servidor (AWS)
+## ☁️ FASE 1: El servidor (AWS)
 
 Vamos a crear el ordenador en la nube donde vivirá tu IA.
 
 1.  Entra en tu consola de AWS y busca **"EC2"**.
 2.  Haz clic en el botón naranja **"Lanzar instancia"** (Launch Instance).
-3.  **Nombre:** Ponle `Agente-IA-Gratis`.
+3.  **Nombre:** Ponle `Agente-IA-openclaw`.
 4.  **Imágenes de aplicaciones y SO:** Selecciona **Ubuntu**.
     * *Importante:* Elige la versión `Ubuntu Server 24.04 LTS (HVM)` o `22.04 LTS` que diga "Apto para la capa gratuita".
-5.  **Tipo de instancia:** Selecciona `t2.micro` o `t3.micro` (Busca la etiqueta verde "Apto para la capa gratuita").
+5.  **Tipo de instancia:** Selecciona `t2.micro` o `t3.micro` (busca la etiqueta verde "Apto para la capa gratuita").
 6.  **Par de claves (Login):**
     * Haz clic en "Crear nuevo par de claves".
     * Ponle un nombre (ej: `clave-agente`).
     * Tipo: `RSA`. Formato: `.pem`.
     * Guarda el archivo descargado en un lugar seguro (aunque usaremos un método más fácil para conectar).
 7.  **Configuraciones de red:**
-    * Marca las casillas: ☑️ Permitir tráfico SSH, ☑️ Permitir tráfico HTTPS, ☑️ Permitir tráfico HTTP.
-8.  **Almacenamiento:** Puedes subirlo hasta **30 GB** (el máximo gratis). Pon 28 GB para estar seguro.
+    * Marca las casillas:
+      ☑️ Permitir tráfico SSH
+      ☑️ Permitir tráfico HTTPS
+      ☑️ Permitir tráfico HTTP.
+8.  **Almacenamiento:** Configura **25 GB** o **30 GB** (límite máximo de la capa gratuita de AWS).
 9.  Haz clic en **"Lanzar instancia"**.
 
 ---
 
-## 🔌 FASE 2: Conexión y Preparación
+## 🔌 FASE 2: Conexión y preparación
 
 No necesitas instalar programas complicados en tu PC. Usaremos el navegador.
 
-### 1. Conectarse al Servidor
+### 1. Conectarse al servidor
 1.  En el panel de EC2, ve a "Instancias" y selecciona tu nueva instancia.
 2.  Haz clic en el botón **"Conectar"** (arriba a la derecha).
 3.  En la pestaña "Conexión de la instancia EC2", deja todo como está y pulsa **"Conectar"**.
-4.  Se abrirá una pantalla negra (Terminal). ¡Ya estás dentro de tu servidor Linux!
+4.  Se abrirá una pantalla negra (terminal). ¡Ya estás dentro de tu servidor Linux!
 
-### 2. Instalar Docker (El entorno)
+### 2. Instalar Docker (el entorno)
 Copia y pega este bloque entero en la terminal y pulsa `Enter`. Esto actualizará el sistema e instalará todo lo necesario de una sola vez:
 
 ```bash
@@ -64,21 +67,21 @@ sudo usermod -aG docker $USER
 
 *Nota: Si te pregunta algo en pantalla rosa, pulsa `Enter` para aceptar las opciones por defecto.*
 
-**Importante:** Ahora escribe `exit` y pulsa Enter para cerrar la ventana. Vuelve a dar al botón **"Conectar"** de AWS para entrar de nuevo. (Esto es necesario para aplicar los permisos de usuario).
+**Importante:** Ahora escribe `exit` y pulsa `Enter` para cerrar la ventana. Vuelve a dar al botón **"Conectar"** de AWS para entrar de nuevo (esto es necesario para aplicar los permisos de usuario).
 
 ---
 
 ## 🤖 FASE 3: Instalación de OpenClaw
 
-### 1. Descargar el Agente
+### 1. Descargar el agente
 Escribe estos comandos uno a uno:
 
 ```bash
-git clone [https://github.com/Starttoaster/OpenClaw.git](https://github.com/Starttoaster/OpenClaw.git)
+git clone https://github.com/Starttoaster/OpenClaw.git
 cd OpenClaw
 ```
 
-### 2. Configurar el "Cerebro"
+### 2. Configurar el "cerebro"
 Ahora vamos a editar el archivo de configuración. Sigue estos pasos con cuidado:
 
 1.  Crea el archivo de configuración copiando el ejemplo:
@@ -91,9 +94,9 @@ Ahora vamos a editar el archivo de configuración. Sigue estos pasos con cuidado
     ```
 
 **DENTRO DEL EDITOR (NANO):**
-Usa las flechas del teclado para bajar. Busca las líneas que configuran el `LLM` (Modelo de lenguaje).
+Usa las flechas del teclado para bajar. Busca las líneas que configuran el `LLM` (modelo de lenguaje).
 
-* **Si usas Groq (Recomendado por velocidad/gratis):**
+* **Si usas Groq (recomendado por velocidad/gratis):**
     Cambia los valores para que queden así:
     ```toml
     [llm]
@@ -102,7 +105,7 @@ Usa las flechas del teclado para bajar. Busca las líneas que configuran el `LLM
     api_key = "TU_API_KEY_DE_GROQ_AQUI"
     ```
 
-* **Si prefieres Qwen (Como en el video, vía OpenRouter):**
+* **Configuración para Qwen 2.5 (vía OpenRouter):**
     ```toml
     [llm]
     provider = "openrouter"
@@ -110,7 +113,7 @@ Usa las flechas del teclado para bajar. Busca las líneas que configuran el `LLM
     api_key = "TU_API_KEY_DE_OPENROUTER_AQUI"
     ```
 
-> **Truco Ninja para Nano:**
+> **Comandos rápidos de edición para Nano:**
 > 1. Borra el texto antiguo y pega tu API Key.
 > 2. Para guardar: Pulsa `Ctrl + O` y luego `Enter`.
 > 3. Para salir: Pulsa `Ctrl + X`.
@@ -131,7 +134,7 @@ Tu agente necesita "cuerpo" en Telegram para hablarte.
 1.  Abre de nuevo la configuración: `nano config.toml`
 2.  Baja hasta la sección `[telegram]`.
 3.  Pega tu token donde dice `bot_token`.
-4.  **(Opcional pero recomendado)** En `allowed_users`, pon tu ID de Telegram (puedes saberlo escribiendo al bot @userinfobot en Telegram) para que solo tú puedas usarlo.
+4.  **Paso de Seguridad Obligatorio:** En la sección **allowed_users**, introduce tu ID de Telegram entre corchetes. Ejemplo: allowed_users = [12345678]. Esto evita que personas extrañas consuman tus recursos. Consigue tu ID en el bot **@userinfobot**.
 5.  Guarda (`Ctrl+O`, `Enter`) y Sal (`Ctrl+X`).
 
 ---
@@ -170,4 +173,4 @@ Si ves mensajes de colores y texto que dice "Started polling" o similar, ¡felic
     * Escribe `docker-compose down`.
 
 ---
-*Este repositorio es una guía educativa basada en OpenClaw. No olvides revisar tu facturación de AWS mensualmente para asegurarte de seguir en la capa gratuita.*
+*No olvides revisar tu facturación de AWS mensualmente para asegurarte de seguir en la capa gratuita.*
