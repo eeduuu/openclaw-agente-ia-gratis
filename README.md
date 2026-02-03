@@ -1,8 +1,8 @@
-# OpenClaw: Guía de instalación 100% Gratis > Servidor y Modelos a coste $0.**
+# OpenClaw: Guía de instalación 100% gratis
 
-> **Estado:** 🟢 Activo | **Coste:** 0€ (Usando AWS Free Tier + API gratuita) | **Modelo:** Qwen / Llama 3
+> **Despliegue completo en la nube sin costes de servidor ni de modelos.**
 
-Esta guía te permite instalar **OpenClaw** (anteriormente MoltBot) en tu propio servidor privado. A diferencia de ejecutarlo en tu PC, aquí tendrás un agente autónomo 24/7 que trabaja por ti, gestionado desde Telegram, sin coste de hardware y con total privacidad.
+Esta guía te permite instalar **OpenClaw** en un servidor privado para tener un agente autónomo operativo 24/7. Contrólalo desde Telegram con total privacidad, sin necesidad de hardware propio y manteniendo un coste de $0.
 
 ---
 
