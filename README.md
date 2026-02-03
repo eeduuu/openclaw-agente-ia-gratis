@@ -2,6 +2,7 @@
 
 > **Despliegue completo en la nube sin costes de servidor ni de modelos.**
 
+
 Instálalo en un servidor privado para tener tu agente autónomo 24/7. Contrólalo por Telegram con total privacidad, sin hardware propio y a coste $0.
 
 ---
