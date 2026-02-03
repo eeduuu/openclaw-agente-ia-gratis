@@ -48,6 +48,8 @@ Vamos a crear el ordenador en la nube donde vivirá tu IA.
 
 No necesitas instalar programas complicados en tu PC. Usaremos el navegador.
 
+![Preparación y conexión de OpenClaw mediante el navegador sin descargas](https://github.com/user-attachments/assets/c1dd717f-5ff5-41d0-8d95-8e2343a08e37)
+
 ### 1. Conectarse al servidor
 1.  En el panel de EC2, ve a "Instancias" y selecciona tu nueva instancia.
 2.  Haz clic en el botón **"Conectar"** (arriba a la derecha).
