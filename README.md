@@ -1,5 +1,10 @@
 # OpenClaw: Guía de instalación 100% gratis
 
+![OpenClaw](https://img.shields.io/badge/OpenClaw-Agente-blueviolet)
+![Gratis](https://img.shields.io/badge/Instalación-Gratis-brightgreen)
+![IA](https://img.shields.io/badge/IA-Autónoma-blue)
+![Idioma](https://img.shields.io/badge/Idioma-Español-red)
+
 > **Despliegue completo en la nube sin costes de servidor ni de modelos.**
 
 Instálalo en un **servidor privado** para tenerlo activo **24/7** y contrólalo por **Telegram**, todo sin hardware propio y a **coste $0**.
