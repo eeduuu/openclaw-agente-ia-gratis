@@ -201,3 +201,5 @@ Esta versión está mantenida por:
 
 Este proyecto mantiene la misma licencia que el repositorio original: **MIT**.  
 Consulta el archivo `LICENSE` para ver el texto completo de la licencia.
+
+Si este repositorio te resulta útil, puedes dejar una ⭐.
