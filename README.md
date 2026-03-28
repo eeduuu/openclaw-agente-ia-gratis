@@ -182,3 +182,22 @@ Si ves mensajes de colores y texto que dice "Started polling" o similar, ¡felic
 
 ---
 *No olvides revisar tu facturación de AWS mensualmente para asegurarte de seguir en la capa gratuita.*
+
+---
+
+## Autor
+
+Esta versión está mantenida por:
+
+💼 [Eduard Pampalona Viladot](https://www.linkedin.com/in/eeduuu-seo-ia/)
+
+<p align="left">
+ <a href="https://www.linkedin.com/in/eeduuu-seo-ia/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn - Eduard Pampalona Viladot" /></a>
+</p>
+
+---
+
+## Licencia
+
+Este proyecto mantiene la misma licencia que el repositorio original: **MIT**.  
+Consulta el archivo `LICENSE` para ver el texto completo de la licencia.
